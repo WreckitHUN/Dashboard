@@ -1,4 +1,15 @@
 :root{
+    
+    /* Clor Palette */
+    --color-primary: #2584ff;
+    --color-secondary: #00D9FF;
+    --color-accent: #ff3400;
+    --color-headings: #1b0760;
+    --color-body: #918ca4;
+    --color-body-darker: #5c5577; 
+    --color-border: #ccc;
+
+    --border-radius: 30px;
 
 }
 
@@ -16,6 +27,55 @@
 html{
     /* 62.5% of 16px is 10px */
     font-size: 62.5%;
+}
+
+body{
+    color: var(--color-body);
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+h1, h2, h3{
+    color: var(--color-headings);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    
+}
+
+h1{
+    font-size: 7rem;
+}
+
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+p{
+    margin-top: 0;
+}
+
+/* Laptop and Desktop */
+@media screen and (min-width: 1024px) {
+    body{
+        font-size: 2rem;
+    }
+    
+    h1{
+        font-size: 8rem;
+    }
+    
+    h2{
+        font-size: 4rem;
+    }
+    
+    h3{
+        font-size: 2.4rem;
+    }
 }
 
 /* Layout */
@@ -36,12 +96,90 @@ main{
 }
 
 .header{
-    background: green;
+    background: white;
     height: 20%;
 }
 
-.icon{
-    width: 50px;
-    height: 50px;
+/* Icons */
 
+.icon{
+    width: 40px;
+    height: 40px;
 }
+
+.icon--small{
+    width: 30px;
+    height: 30px;
+}
+
+.icon--white{
+    color: white;
+}
+
+.icon--dark{
+    color: black;
+}
+
+#searchIcon{
+    transition: all 0.5s;
+}
+
+#searchIcon:hover{
+    transform: scale(1.2);
+}
+
+#bellIcon:hover{
+    animation-name: shakeX;
+    animation-duration: 0.5s;
+}
+
+
+
+/* INPUTS */
+
+#searchBar{
+    width: 100%;
+    background: #cdcbd7;
+    margin-left: 10px;
+    border-radius: var(--border-radius);
+    border: none;
+    color: var(--color-headings);
+    font-size: 1rem;
+    outline: 0;
+    padding: 0.75rem 1.5rem;
+}
+
+::placeholder{
+    color: #cdcbd7;
+}
+
+/* HEADER LINE */
+
+.topLine{
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+/* ANIMATIONS */
+
+@keyframes shakeX {
+    0%,to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+
+    10%,30%,50%,70%,90% {
+        -webkit-transform: translate3d(-1px,0,0);
+        transform: translate3d(-1px,0,0)
+    }
+
+    20%,40%,60%,80% {
+        -webkit-transform: translate3d(1px,0,0);
+        transform: translate3d(1px,0,0)
+    }
+}
+

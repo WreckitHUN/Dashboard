@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
@@ -12,12 +18,17 @@
     <main>
       <div class="header">
         <div class="topLine">
-          <svg class="icon">
+          <svg class="icon icon--small icon--dark" id="searchIcon">
             <use xlink:href="assets/header.svg#search"></use>
+          </svg>
+          <input id="searchBar" name="searchBar" type="text" />
+          <svg class="icon icon--small icon--dark" id="bellIcon">
+            <use xlink:href="assets/header.svg#bellRinging"></use>
           </svg>
         </div>
       </div>
       <div class="platform"></div>
     </main>
+    <script src="main.js"></script>
   </body>
 </html>
