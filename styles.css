@@ -1,0 +1,45 @@
+:root{
+
+}
+
+*, *::after, *::before{
+    /* Keeping the width and height */
+    box-sizing: border-box;
+}
+
+/* Topography */
+::selection{
+    background: tomato;
+    color: white;
+}
+
+html{
+    /* 62.5% of 16px is 10px */
+    font-size: 62.5%;
+}
+
+/* Layout */
+body{
+    display: flex;
+
+}
+aside{
+    background: dodgerblue;
+    height: 100vh;
+    width: 20%;
+}
+
+main{
+    background: gold;
+    height: 100vh;
+    width: 80%;
+}
+
+.header{
+    background: green;
+    height: 20%;
+}
+
+.platform{
+
+}
