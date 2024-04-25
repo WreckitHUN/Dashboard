@@ -1,16 +1,12 @@
 :root{
     
     /* Clor Palette */
-    --color-primary: #2584ff;
-    --color-secondary: #00D9FF;
-    --color-accent: #ff3400;
-    --color-headings: #1b0760;
-    --color-body: #918ca4;
-    --color-body-darker: #5c5577; 
-    --color-border: #ccc;
-
+    --color-headings-light: #1b0760;
+    --color-body-light: black;
+    --color-body-darker-light: #5c5577;
+    --color-btn-light: dodgerblue; 
+    --color-btn-text-light: white;
     --border-radius: 30px;
-
 }
 
 *, *::after, *::before{
@@ -30,17 +26,16 @@ html{
 }
 
 body{
-    color: var(--color-body);
+    color: var(--color-body-light);
     font-family: Inter, Arial, Helvetica, sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 1.5;
 }
 
 h1, h2, h3{
-    color: var(--color-headings);
+    color: var(--color-headings-light);
     margin-bottom: 1rem;
     line-height: 1.1;
-    
 }
 
 h1{
@@ -56,7 +51,7 @@ h3{
 }
 
 p{
-    margin-top: 0;
+    margin: 0;
 }
 
 /* Laptop and Desktop */
@@ -64,6 +59,7 @@ p{
     body{
         font-size: 2rem;
     }
+    
     
     h1{
         font-size: 8rem;
@@ -90,14 +86,13 @@ aside{
 }
 
 main{
-    background: gold;
-    height: 100vh;
+    background: #cdcbd7;
     width: 80%;
 }
 
 .header{
     background: white;
-    height: 20%;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 /* Icons */
@@ -138,13 +133,11 @@ main{
 /* INPUTS */
 
 #searchBar{
-    width: 75%;
+    width: 100%;
     background: #cdcbd7;
-    margin:0 10px;
     border-radius: var(--border-radius);
     border: none;
-    color: var(--color-headings);
-    font-size: 1rem;
+    color: var(--color-headings-light);
     outline: 0;
     padding: 0.75rem 1.5rem;
 }
@@ -153,12 +146,86 @@ main{
     color: #cdcbd7;
 }
 
+/* BUTTONS */
+
+.btn{
+    background: var(--color-btn-light);
+    color: var(--color-btn-text-light);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.75rem 2rem;
+    transition: all 0.1s;
+}
+
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.btn:active{
+    transform: scale(0.95);
+}
+
 /* HEADER LINE */
 
 .topLine{
     padding: 1rem 2rem;
     display: flex;
-    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topLine__left{
+    width: 65%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.topLine__right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bottomLine{
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bottomLine__right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile{
+    aspect-ratio: 1/1;
+    background: url(assets/cat.jpg);
+    background-position: top;
+    background-size: cover; /* This will resize your image */
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.profile--small{
+    height: 40px;
+    width: 40px;
+}
+
+.profileName{
+    font-weight: 700;
+    text-wrap: nowrap;
+    text-align: center;
 }
 
 

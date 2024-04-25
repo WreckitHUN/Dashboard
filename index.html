@@ -11,20 +11,48 @@
     />
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <meta name="description" content="This is the text that will show up on search engines" />
+    <meta property="og:title" content="Szabolcs..." />
+    <meta property="og:description" content="This is the text that will show" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://" />
+    <meta property="og:url" content="http://tothszabi.com" />
+    <title>Dashboard</title>
   </head>
   <body>
     <aside></aside>
     <main>
       <div class="header">
         <div class="topLine">
-          <svg class="icon icon--small icon--dark" id="searchIcon">
-            <use xlink:href="assets/header.svg#search"></use>
-          </svg>
-          <input id="searchBar" name="searchBar" type="text" />
-          <svg class="icon icon--small icon--dark" id="bellIcon">
-            <use xlink:href="assets/header.svg#bellRinging"></use>
-          </svg>
+          <div class="topLine__left">
+            <svg class="icon icon--small icon--dark" id="searchIcon">
+              <use xlink:href="assets/header.svg#search"></use>
+            </svg>
+            <form action="submit">
+              <input id="searchBar" name="searchBar" type="text" />
+            </form>
+          </div>
+          <div class="topLine__right">
+            <svg class="icon icon--small icon--dark" id="bellIcon">
+              <use xlink:href="assets/header.svg#bellRinging"></use>
+            </svg>
+            <div class="profile profile--small"></div>
+            <p class="profileName">Szabolcs Tóth</p>
+          </div>
+        </div>
+        <div class="bottomLine">
+          <div class="welcome">
+            <div class="profile"></div>
+            <div>
+              <p>Hi there,</p>
+              <p class="profileName">Szabolcs Tóth (@szabi)</p>
+            </div>
+          </div>
+          <div class="bottomLine__right">
+            <button class="btn">New</button>
+            <button class="btn">Upload</button>
+            <button class="btn">Share</button>
+          </div>
         </div>
       </div>
       <div class="platform"></div>
