@@ -10,9 +10,11 @@ const setTheme = () => {
 const nav = document.querySelector(".nav");
 const arrow = document.querySelector(".arrow");
 
+let start = null;
+let current = null;
+
 arrow.addEventListener("click", () => {
     arrow.classList.toggle("open");
     nav.classList.toggle("open");
 })
-  
   
