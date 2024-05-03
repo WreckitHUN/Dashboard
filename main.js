@@ -8,13 +8,22 @@ const setTheme = () => {
 }
 
 const nav = document.querySelector(".nav");
-const arrow = document.querySelector(".arrow");
+const line = document.querySelector(".lineIcon");
 
-let start = null;
-let current = null;
-
-arrow.addEventListener("click", () => {
-    arrow.classList.toggle("open");
+line.addEventListener("click", () => {
     nav.classList.toggle("open");
 })
-  
+
+document.addEventListener('click', function(event) {
+    let isClickInside1 = nav.contains(event.target);
+    let isClickInside2 = line.contains(event.target);
+    let center = document.querySelector(".center");
+
+    if (!isClickInside1 && !isClickInside2) {
+        nav.classList.remove("open");
+        center.classList.remove("lower-opacity");
+    } else {
+        center.classList.add("lower-opacity");
+    }
+});
+
