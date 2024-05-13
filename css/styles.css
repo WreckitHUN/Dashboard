@@ -98,6 +98,7 @@ aside{
 }
 
 header{
+    z-index: 1;
     height: 200px;
     background: var(--sky-100);
     grid-area: header;
