@@ -13,6 +13,19 @@
     --sky-800: #075985;
     --sky-900: #0c4a6e;
     --sky-950: #082f49;
+
+    /* Yellow colors */
+    --yellow-50: #fefce8;
+    --yellow-100: #fef9c3;
+    --yellow-200: #fef08a;
+    --yellow-300: #fde047;
+    --yellow-400: #facc15;
+    --yellow-500: #eab308;
+    --yellow-600: #ca8a04;
+    --yellow-700: #a16207;
+    --yellow-800: #854d0e;
+    --yellow-900: #713f12;
+    --yellow-950: #422006;
 }
 
 *, *::after, *::before{
@@ -140,6 +153,10 @@ a:visited{
     height: 50px;
 }
 
+.card .icon:hover{
+    color: var(--yellow-500);
+}
+
 /* Buttons */
 
 .btn{
@@ -228,3 +245,94 @@ header{
     justify-content: center;
     gap: 20px;
 }
+
+/* Main */
+
+main{
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    'projects announcements'
+    'projects trending';
+    grid-template-columns: 1fr 0.4fr;
+    grid-template-rows: auto;
+}
+
+.projects, .announcements, .trending{
+    display: grid;
+    gap: 20px;
+}
+
+.projects{
+    grid-area: projects;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    
+}
+
+.announcements{
+    grid-area: announcements;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+.trending{
+    grid-area: trending;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+.title{
+    font-weight: 700;
+}
+/* Cards */
+
+.card{
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    font-size: 1.6rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+    background: var(--sky-50);
+    border-radius: calc(var(--border-radius) / 2);
+}
+
+.card em{
+    font-size: 2rem;
+}
+
+.card__border{
+    width: 1rem;
+    background: var(--yellow-500);
+}
+
+.card__main{
+    padding: 20px;
+}
+
+.card__actions{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: right;
+}
+
+.announcements .card{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 20px 40px;
+}
+
+.announcements__element{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.announcements .announcements__element:not(:first-child) {
+    border-top: 1px solid rgba(1, 1, 1, 0.3);
+  }
