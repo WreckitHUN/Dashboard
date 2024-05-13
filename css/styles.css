@@ -19,6 +19,12 @@
     box-sizing: border-box;
 }
 
+/* to svg's fill = currentColor*/
+
+img{
+    width: 100%;
+}
+
 /* Topography */
 html{
     /* 62.5% of 16px is 10px */
@@ -52,5 +58,92 @@ h3{
 
 p{
     margin: 0;
+}
+
+/* Layout */
+
+body{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    'aside header'
+    'aside main';
+}
+
+aside{
+    height: 100svh;
+    width: fit-content;
+    background: var(--sky-950);
+    color: var(--sky-50);
+    grid-area: aside;
+    padding: 30px;
+}
+
+.logo{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.logo h1{
+    margin: 0;
+}
+
+header{
+    height: 200px;
+    background: var(--sky-100);
+    grid-area: header;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+main{
+    background: var(--sky-200);
+}
+
+/* Links */
+
+a{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-decoration: none;
+}
+
+a:visited{
+    color: currentColor;
+    text-decoration: none;
+}
+
+/* List */
+
+.list{
+    margin-top: 50px;
+    list-style: none;
+    padding: 0;
+}
+
+.list__element{
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+
+
+.list__element:hover{
+    color: var(--sky-500);
+}
+
+/* Icons */
+
+.icon{
+    width: 30px;
+    height: 30px;
+}
+
+.icon--big{
+    width: 50px;
+    height: 50px;
 }
 
