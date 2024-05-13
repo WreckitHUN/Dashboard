@@ -60,6 +60,11 @@ p{
     margin: 0;
 }
 
+em{
+    font-style: normal;
+    font-weight: 700;
+}
+
 /* Layout */
 
 body{
@@ -73,21 +78,10 @@ body{
 
 aside{
     height: 100svh;
-    width: fit-content;
     background: var(--sky-950);
     color: var(--sky-50);
     grid-area: aside;
     padding: 30px;
-}
-
-.logo{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.logo h1{
-    margin: 0;
 }
 
 header{
@@ -130,7 +124,6 @@ a:visited{
 }
 
 
-
 .list__element:hover{
     color: var(--sky-500);
 }
@@ -147,3 +140,91 @@ a:visited{
     height: 50px;
 }
 
+/* Buttons */
+
+.btn{
+    background: var(--sky-950);
+    color: var(--sky-50);
+    border-radius: 40px;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    padding: 1rem 2.5rem;
+    white-space: nowrap;
+}
+
+/* Aside */
+
+.logo{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.logo h1{
+    margin: 0;
+}
+
+/* Header */
+
+header{
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    grid-template-areas: 
+    'search notify'
+    'profile post';
+    grid-template-columns: 1fr 0.7fr;
+
+}
+
+.header__element{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Search */
+
+.search__bar{
+    width: 100%;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.5rem 2rem;
+}
+
+.search__bar:focus{
+    outline: none;
+}
+
+/* Notify */
+
+.notify .header__element{
+    justify-content: center;
+}
+
+.profile__picture{
+    width: 50px;
+    height: 50px;
+    background: url(../assets/szabi.jpg);
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.profile__picture--big{
+    width: 70px;
+    height: 70px; 
+}
+
+.notify p{
+    font-weight: 700;
+}
+
+/* Post */
+
+.post{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
